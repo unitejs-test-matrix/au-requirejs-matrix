@@ -37,6 +37,7 @@ for f in */; do
 
         echo "$f - npm install"
         npm install >> $BUILD_OUTPUT 2>&1
+        cat package.json >> $BUILD_OUTPUT 2>&1
         echo "$f - gulp build"
         gulp build >> $BUILD_OUTPUT 2>&1
         echo "$f - gulp unit"
